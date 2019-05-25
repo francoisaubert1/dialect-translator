@@ -1,0 +1,5 @@
+SELECT distinct
+"zone_id", 
+split_part("model_scope_id", '|', 2) as zone_bucket
+FROM "KIL_SCOPE_scope_metadata"
+where split_part("model_scope_id", '|', 2) is not null
